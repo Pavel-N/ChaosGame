@@ -14,3 +14,16 @@ This is a Rust implementation of the [Chaos Game](https://en.wikipedia.org/wiki/
 - [ ] There should be at least a bit of theory in this README
 - [ ] Better font loading
 - [ ] Maybe I should add more fractals other then just [Sierpiński triangle](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle)
+
+## How to run
+
+> **Note**
+> You may need to change path to your prefered font in the following line in th `main.rs` file.
+```rust
+const FONT_PATH: &str = "/usr/share/fonts/TTF/arial.ttf";
+```
+
+Then run it with release profile:
+```shell
+$ cargo run --release
+```

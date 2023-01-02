@@ -10,6 +10,7 @@ mod normal_point;
 const BACKGROUND: Color = Color::RGB(33, 33, 33);
 const WIDTH: u32 = 800;
 const HEIGHT: u32 = 800;
+const FONT_PATH: &str = "/usr/share/fonts/TTF/arial.ttf";
 
 pub fn main() -> Result<(), String> {
     let ttf_context = sdl2::ttf::init().map_err(|e| e.to_string())?;

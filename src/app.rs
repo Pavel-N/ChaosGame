@@ -1,6 +1,6 @@
 use sdl2::{pixels::Color, ttf::Font};
 
-use crate::{BACKGROUND, HEIGHT, WIDTH};
+use crate::{BACKGROUND, FONT_PATH, HEIGHT, WIDTH};
 
 type Canvas = sdl2::render::Canvas<sdl2::video::Window>;
 
@@ -28,7 +28,7 @@ impl<'a> App<'a> {
         let canvas = window.into_canvas().build().map_err(|e| e.to_string())?;
         let event_pump = sdl_context.event_pump()?;
 
-        let font = ttf_context.load_font("/usr/share/fonts/TTF/arial.ttf", 40)?;
+        let font = ttf_context.load_font(FONT_PATH, 40)?;
 
         Ok(App {
             canvas,
